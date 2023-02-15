@@ -1,34 +1,31 @@
 
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
 -- Create entity
 local entity = Spawner.createEntity({
-    CustomName = "Template Entity", -- Custom name of your entity
-    Model = "rbxassetid://11884361297", -- Can be GitHub file or rbxassetid
+    CustomName = "Specimen2", -- Custom name of your entity
+    Model = "rbxassetid:////502243972", -- Can be GitHub file or rbxassetid
     Speed = 100, -- Percentage, 100 = default Rush speed
     DelayTime = 2, -- Time before starting cycles (seconds)
     HeightOffset = 0,
     CanKill = true,
     NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 30,
+    NoHiding = true,
+    AntiCrucifix = true,
+    KillRange = 100,
     OneRoom = false,
     DieOnLook = false,
-    BreakLights = true,
+    BreakLights = false,
     BackwardsMovement = false,
      MovementDeath = {
         true, -- Turned On?
         '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
     },
     FlickerLights = {
-        true, -- Enabled/Disabled
+        false, -- Enabled/Disabled
         1, -- Time (seconds)
     },
 EntitySounds = { -- Can Get rid Of
 PlaySound = {
-              "https://github.com/MuhXd/Models/blob/main/video0-1-3.mp3?raw=true", -- SoundId Link or Roblox ID
+              "", -- SoundId Link or Roblox ID
             { Volume = 5 }, -- Sound properties
        },
         
@@ -41,8 +38,8 @@ PlaySound = {
 
     Cycles = {
         Min = 1,
-        Max = 4,
-        WaitTime = 2,
+        Max = 1,
+        WaitTime = 1,
     },
     CamShake = {
         true, -- Enabled/Disabled
@@ -50,7 +47,7 @@ PlaySound = {
         100, -- Shake start distance (from Entity to you)
     },
     Jumpscare = {
-        true, -- Enabled/Disabled
+        false, -- Enabled/Disabled
         {
             Type = "2", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
             Image1 = "rbxassetid://10483855823", -- Image1 url
@@ -78,10 +75,10 @@ PlaySound = {
     Color = 'CuriousLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
     DiffrentMessages = true,
     CustomDialog = {  
-        {"You can", "put your", "custom death", "message here."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+        {"you died to Specimen2", "crouch or you wil die", "when crouched he dosen't sence"}, -- Death Messages
+        {"make sure to follow the steps"},
+        {"you might be begennier skill with this entity", "he is not hard at all!"},
+        {"It seems you need more help with dying but sorry for the inconvience...", "hiding will aslo get you killed."},
          {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
     }
 })
